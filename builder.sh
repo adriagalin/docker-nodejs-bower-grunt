@@ -16,7 +16,7 @@ function builder_push_image {
 	tag=$(cat $version/Dockerfile | grep "FROM node:" | cut -d':' -f2)
 	$docker build -t $image:$tag $version
 	$docker tag $image:$tag $image:latest
-	$docker push adriagalin/nodejs-bower-grunt:$version
+	$docker push adriagalin/nodejs-bower-grunt:$tag
 }
 
 for version in "${versions[@]}"; do
