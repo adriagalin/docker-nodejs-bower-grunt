@@ -24,3 +24,5 @@ for version in "${versions[@]}"; do
 	builder_push_image
 
 done
+
+$docker push adriagalin/nodejs-bower-grunt:latest
